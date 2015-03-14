@@ -71,3 +71,6 @@ noremap <F4> :set number!<CR>
 
 "highlight trailing whitespace
 match ErrorMsg '\s\+$'
+"Disable bells
+set visualbell
+set t_vb=

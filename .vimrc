@@ -74,3 +74,4 @@ match ErrorMsg '\s\+$'
 "Disable bells
 set visualbell
 set t_vb=
+autocmd FileType ocaml source /home/vanush/.opam/system/share/vim/syntax/ocp-indent.vim

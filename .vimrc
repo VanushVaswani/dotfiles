@@ -24,10 +24,12 @@ set number          "show line numbers
 set matchtime=1
 highlight MatchParen cterm=none ctermbg=none ctermfg=cyan
 
+""llvm ir
+augroup filetype
+  au! BufRead, BufNewFile *.ll	set filetype=llvm
+augroup END
 
 "auto-indenting
-set smartindent
-set autoindent
 filetype indent on
 
 "tab settings for most files (BCM Cstyle)
@@ -74,4 +76,12 @@ match ErrorMsg '\s\+$'
 "Disable bells
 set visualbell
 set t_vb=
+
 autocmd FileType ocaml source /home/vanush/.opam/system/share/vim/syntax/ocp-indent.vim
+if &diff
+	colorscheme evening
+endif
+set backupdir=~/.vim/backup/
+set directory=~/.vim/backup/
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore =  '\v[\/]\.(git|hg|svn)$'

@@ -85,3 +85,4 @@ set backupdir=~/.vim/backup/
 set directory=~/.vim/backup/
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore =  '\v[\/]\.(git|hg|svn)$'
+set mouse=a
